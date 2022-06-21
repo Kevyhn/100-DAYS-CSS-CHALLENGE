@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--cubic-bezier: cubic-bezier(.21,.98,.6,.99);
+	--box-shadow: 1px 5px 10px 0px rgba(0,0,0,0.3);
+}
+
+.main {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #e56262;
+}
+
+.circle-1,
+.circle-2,
+.circle-3 {
+	position: absolute;
+	border-radius: 50%;
+	background: #fff;
+}
+
+.circle-1 {
+	z-index: 1;
+	width: 75px;
+	height: 75px;
+}
+
+.circle-2 {
+	z-index: 2;
+	width: 50px;
+	height: 50px;
+}
+
+.circle-3 {
+	z-index: 3;
+	width: 25px;
+	height: 25px;
+}
+
+.circle-1 {
+	animation: circle-1 3s var(--cubic-bezier) alternate infinite;
+	box-shadow: var(--box-shadow);
+}
+
+.circle-2 {
+	animation: circle-2 3s var(--cubic-bezier) alternate infinite;
+	box-shadow: var(--box-shadow);
+}
+
+.circle-3 {
+	animation: circle-3 3s var(--cubic-bezier) alternate infinite;
+	box-shadow: var(--box-shadow);
+}
+
+@keyframes circle-1 {
+	0%, 10%{
+		transform: scale(0);
+	}
+
+	100%{
+		transform: scale(1);
+	}
+}
+
+@keyframes circle-2 {
+	0%, 40%{
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes circle-3 {
+	0%, 70%{
+		transform: scale(0);
+	}
+
+	100%{
+		transform: scale(1);
+	}
+}

@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(83,0,177);
+	background: linear-gradient(60deg, rgba(83,0,177,1) 20%, rgba(87,167,255,1) 80%);
+}
+
+.numbers {
+	position: relative;
+	height: 100px;
+	width: auto;
+}
+
+.one-one,
+.one-two,
+.zero-one,
+.zero-two {
+	position: absolute;
+	box-shadow: 0 0 13px 0 rgb(0, 0, 0,0.5);
+}
+
+.one-one {
+	width: 25px;
+	height: 100%;
+	border-radius: 3px;
+	background: #fff;
+	z-index: 5;
+}
+
+.one-two {
+	top: 3px;
+	width: 25px;
+	height: 40px;
+	border-radius: 3px;
+	transform: translateX(-18px) rotate(50deg);
+	background: #fff;
+	z-index: 4;
+}
+
+.zero-one,
+.zero-two {
+	width: 100px;
+	height: 100%;
+	border: 25px solid #fff;
+	border-radius: 50%;
+	transform: translateX(15px);
+}
+
+.zero-one {
+	z-index: 3;
+}
+
+.zero-two {
+	transform: translateX(100px);
+	z-index: 1;
+}
+
+.description {
+	font-family: 'Courier New';
+	color: #fff;
+	text-align: center;
+}
+
+.description h1 {
+	font-size: 75px;
+}
+
+.description h3 {
+	margin-top: -20px;
+	letter-spacing: 3px;
+}
