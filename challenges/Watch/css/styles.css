@@ -1,0 +1,113 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.frame {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #555;
+}
+
+.watch {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	border: 10px solid #333;
+	border-radius: 50%;
+	background: #000;
+	color: #fff;
+	text-align: center;
+}
+
+.stroke {
+	stroke: #f81e1e;
+	stroke-width: 3;
+	stroke-dasharray: 805;
+	transform-origin: center center;
+	transform: rotate(-90deg);
+	animation: spinner 5s linear infinite;
+}
+
+.points {
+	position: absolute;
+	width: 87%;
+	height: 87%;
+	border-radius: 50%;
+	border: 4px dashed #f8f8f8;
+}
+
+.content {
+	position: absolute;
+}
+
+.date {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 13px;
+	color: #f8f8f8;
+}
+
+.m-r {
+	margin-right: 5px;
+}
+
+.time {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 50px;
+	font-weight: 800;
+}
+
+.beat-energy {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #f8f8f8;
+}
+
+.beat span {
+	margin-right: 5px;
+	color: #f81e1e;
+	animation: heart 500ms alternate infinite;
+}
+
+.energy {
+	font-size: 13px;
+}
+
+@keyframes spinner {
+	0% {
+		stroke-dashoffset: 805;
+	}
+
+	50% {
+		stroke-dashoffset: 0;	
+	}
+
+	100% {
+		stroke-dashoffset: -805;
+	}
+}
+
+@keyframes heart {
+	to {
+		transform: scale(1);
+	}
+
+	from {
+		transform: scale(1.2);
+	}
+}

@@ -1,0 +1,166 @@
+html {
+	background: #000;
+	color: #fff;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.frame {
+	position: relative;
+	width: 400px;
+	height: 400px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 5px;
+	padding: 5px;
+	border-radius: 5px;
+	font-family: 'Open Sans',sans-serif;
+	background: #fff;
+	overflow: hidden;
+}
+
+.img {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.img img {
+	width: 100%;
+	height: 100%;
+}
+
+.img .fa-plus {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: #ec6565;
+	transform: scale(1.5);
+	opacity: 0;
+	transition: all 600ms;
+	z-index: 10;
+}
+
+.bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: opacity 600ms;
+	z-index: 1;
+}
+
+.img:hover .fa-plus {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.img:hover .bg {
+	opacity: 1;
+}
+
+.close-btn {
+	position: absolute;
+	top: -55px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	font-weight: 200;
+	background: #ec6565;
+	transform: rotate(45deg);
+	cursor: pointer;
+	transition: top 800ms ease-in-out;
+	transition-delay: 900ms;
+	z-index: 30;
+}
+
+.bg-img {
+	position: absolute;
+	top: -45%;
+	left: 0;
+	width: 100%;
+	height: 45%;
+	background-image: url('https://100dayscss.com/codepen/13-1-header.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: top 800ms ease-in-out;
+	z-index: 20;
+}
+
+.img-selected {
+	position: absolute;
+	top: -100px;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	transform: translate(-45%, -50%);
+	border: 2px solid #fff;
+	background-image: url('https://100dayscss.com/codepen/13-1.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: top 1.5s ease-in-out;
+	z-index: 30;
+}
+
+.bg-color {
+	position: absolute;
+	bottom: -55%;
+	left: 0;
+	width: 100%;
+	height: 55%;
+	text-align: center;
+	cursor: #fff;
+	background: #ec6565;
+	transition: bottom 800ms ease-in-out;
+	z-index: 20;
+}
+
+.action {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#name {
+	margin-top: 60px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.action span {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10px;
+	font-size: 20px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 400ms;
+}
+
+.action span:hover {
+	background: #fff;
+	color: #ec6565;
+}

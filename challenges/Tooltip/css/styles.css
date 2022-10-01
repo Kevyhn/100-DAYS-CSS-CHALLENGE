@@ -1,0 +1,91 @@
+.frame {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	top: 50%;
+	left: 50%;
+	color: #fff;
+	padding: 30px;
+	border-radius: 5px;
+	font-family: 'Open Sans', sans-serif;
+	transform: translate(-50%, -50%);
+	background: #4bb5e4;
+}
+
+.frame::before {
+	content: '„';
+	position: absolute;
+	top: -170px;
+	left: 3px;
+	color: #fff;
+	font-size: 300px;
+	font-family: sans-serif;
+	opacity: .3;
+	z-index: -100;
+}
+
+.frame p {
+	margin-top: 70px;
+	font-size: 28px;
+}
+
+.hover:hover .tooltip {
+	top: 24px;
+	opacity: 1;
+	visibility: visible;
+}
+
+.word {
+	padding: 0px 5px;
+	background: #236481;
+	cursor: pointer;
+}
+
+.tooltip {
+	position: absolute;
+	width: 350px;
+	height: auto;
+	top: 10px;
+	left: 60px;
+	font-size: 18px;
+	background: #236481;
+	transition: all 500ms;
+	opacity: 0;
+	visibility: hidden;
+
+}
+
+.pronounce {
+	display: block;
+	color: #236481;
+	padding: 5px 15px;
+	background: #fff;
+}
+
+.fa {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.info {
+	display: block;
+	line-height: 28px;
+	padding: 10px 15px;
+}
+
+.tooltip::before {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 8px;
+	bottom: -7px;
+	left: 160px;
+	clip-path: polygon(0 0, 50% 100%, 100% 0);
+	background: #236481;
+}
+
+.author {
+	font-size: 22px;
+	font-weight: 300;
+	font-style: italic;
+}

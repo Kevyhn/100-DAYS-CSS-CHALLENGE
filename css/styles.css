@@ -1,0 +1,48 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	background: rgb(83,0,177);
+	background: linear-gradient(60deg, #673ab7 20%, #000 80%);
+}
+
+header {
+	width: 100vw;
+	margin-top: 10px;
+	text-align: center;
+}
+
+header h1 {
+	color: #fff;
+}
+
+.days {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+ol {
+	font-size: 20px;
+}
+
+ol li {
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+ol a {
+	color: #fff;
+}
+
+ol a:hover {
+	opacity: 0.6;
+}
